@@ -9,8 +9,8 @@ router.get('/', (req, res, next) => {
 
 // 영화 상세 페이지
 router.get('/:id', (req, res, next) => {
-    let id = parseInt(req.params.id, 10);
-    let movie = movies.filter(function(movie){
+    var id = parseInt(req.params.id, 10);
+    var movie = movies.filter(function(movie){
         return movie.id === id
     });
     res.send(movie)
